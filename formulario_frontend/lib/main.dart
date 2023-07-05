@@ -86,6 +86,11 @@ class _HomeState extends State<Home> {
                     lastDate: DateTime(2100),
                   );
                 },
+                validator: (value) {
+                  if (value == null) {
+                    return "Campo Obrigatorio";
+                  }
+                },
               ),
 
                 //DATA FINAL DO CURSO
@@ -111,6 +116,7 @@ class _HomeState extends State<Home> {
                   }
                 },
               ),
+
                 //HORAS DA AULA DO DIA
                 TextFormField()
                 //CURSO
@@ -122,10 +128,4 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-//     if(_picked != null){
-//       setState(() {
-//         _Datacontroller.text = _picked.toString().split("")[0];
-//       });
-//     }
-//   }
-// }
+}
