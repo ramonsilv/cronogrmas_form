@@ -8,20 +8,27 @@ class Pagina extends StatefulWidget {
 }
 
 class _PaginaState extends State<Pagina> {
+  final List<String> _lista = ['Turma 1', 'Turma 2', 'Turma 3'];
   @override
   Widget build(BuildContext context) {
-    Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Lista de Turma"),
         backgroundColor: Colors.blue,
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Center(
-          child: SingleChildScrollView(
-            child: Center{ListView
-            },
-            )
+          child: ListView.builder(
+              padding: const EdgeInsets.all(8),
+              itemCount: _lista.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  height: 50,
+                  color: Colors.indigo,
+                  child: Center(child: Text(' ${_lista[index]}')),
+                );
+              }),
         ),
       ),
     );
