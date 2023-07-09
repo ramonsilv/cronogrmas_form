@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:formulario_frontend/telas/cadastro.dart';
-import 'package:formulario_frontend/telas/login.dart';
-import 'package:formulario_frontend/telas/pagina.dart';
+import 'package:formulario_frontend/telas/cadastro.dart';       //(ITEM TROUBLESHOOTING)
+import 'package:formulario_frontend/telas/login.dart';         //(ITEM TROUBLESHOOTING)
+import 'package:formulario_frontend/telas/pagina.dart';       //(ITEM TROUBLESHOOTING)
 
 void main() {
   runApp(const App());
@@ -20,7 +20,7 @@ class App extends StatelessWidget {
           ThemeData(brightness: Brightness.dark, primarySwatch: generateMaterialColor(Palette.primary)),
       debugShowCheckedModeBanner: false,
       //INDEX
-      home: const Login(),
+      home: const Login(),                    //(ATIVIDADE 3 ITEM F)
       //PAGINAS SECUNDARIAS
       routes: {
         '/cadastro': (context) => const Home(),
